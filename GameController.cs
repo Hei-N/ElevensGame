@@ -38,8 +38,8 @@ public class GameController
                 break;
             }
 
-            // LOSS: no legal move and deck empty
-            if (!table.HasLegalMove() && deck.IsEmpty())
+            // LOSS: no legal move — deck cards are unreachable without a valid move
+            if (!table.HasLegalMove())
             {
                 gameState = GameState.Loss;
                 break;
